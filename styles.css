@@ -1,16 +1,19 @@
+body {
+  background-color: antiquewhite;
+}
+
 .card-grid {
   display: grid;
-  align-items: center;
-  background-color: green;
-  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 500px);
   row-gap: 50px;
+  column-gap: 50px;
 }
 
 .card-grid div {
   display: inline-block;
-  /* background-color: yellow; */
-  margin: auto;
-  width: 50%;
+  /* margin: auto; */
+  width: 75%;
 }
 
 span {
@@ -20,14 +23,13 @@ span {
 
 img {
   width: 100%;
-  height: 275px;
 }
 
 h2 {
-    font-size: 2;
+  font-size: 2;
 }
 
 p,
 p span {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
