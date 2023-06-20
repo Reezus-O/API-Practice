@@ -1,7 +1,7 @@
 const loginForm = document.getElementById('loginForm');
 
-loginForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
+loginForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
@@ -17,7 +17,7 @@ loginForm.addEventListener('submit', async (e) => {
 
         const jsonResponse = await response.json()
         console.log(jsonResponse)
-        
+
         if (response.ok) {
             window.location.href = 'products.html';
         } else {
