@@ -1,9 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: antiquewhite;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  width: 100vw;
 }
 
 .card-grid {
   display: grid;
+  padding: 1rem 0;
   justify-content: space-between;
   grid-template-columns: repeat(3, 500px);
   row-gap: 50px;
@@ -12,23 +22,82 @@ body {
 
 .card-grid div {
   display: inline-block;
-  /* margin: auto; */
   width: 75%;
 }
 
-span {
-  text-decoration-line: line-through;
-  text-decoration-style: double;
+.card-img {
+  height: 328px;
+  width: 225px;
 }
 
-img {
-  width: 100%;
+.product-title {
+  font-size: 1rem;
+  margin: auto;
+  padding: 0.5rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 225px;
 }
 
-h2 {
-  font-size: 2;
-}
-
-p {
+.price {
   font-size: 1.5rem;
+}
+
+/*Login Page  */
+
+.login-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 4rem;
+  padding-bottom: 1.5rem;
+}
+
+label,
+input {
+  margin: 1rem 0;
+}
+
+.login-btn {
+  padding:.25rem 1rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 576px) {
+  .card-grid {
+    display: grid;
+    padding: 1rem 0;
+    justify-content: space-between;
+    grid-template-rows: 500px;
+    row-gap: 50px;
+    column-gap: 50px;
+  }
+
+  .product-title {
+    font-size: 2rem;
+    margin: auto;
+    padding: 0.5rem 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 225px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-grid {
+    display: grid;
+    padding: 1rem 0;
+    justify-content: space-between;
+    grid-template-rows: 500px;
+    row-gap: 50px;
+    column-gap: 50px;
+  }
 }
